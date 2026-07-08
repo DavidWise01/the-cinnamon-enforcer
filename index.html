@@ -16,6 +16,8 @@
  .pairmark{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);padding-top:28px;text-align:center}
  .pairmark b{color:var(--red)}
  .cover{text-align:center;padding:30px 0 26px;border-bottom:1px solid var(--line)}
+ .bear-medallion{width:min(258px,60vw);margin:14px auto 22px;filter:drop-shadow(0 0 42px rgba(224,80,60,.36))}
+ .bear-medallion svg{width:100%;height:auto;display:block}
  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--faint);margin-bottom:16px}
  h1.title{font-family:'Newsreader',Georgia,serif;font-weight:600;font-size:clamp(40px,10vw,82px);line-height:.98;letter-spacing:.01em;color:var(--ink);text-shadow:0 0 36px rgba(224,80,60,.4)}
  h1.title .c{color:var(--red-br)}
@@ -51,6 +53,79 @@
 <div class="pairmark">a personal original &middot; David Lee Wise (ROOT0) &middot; rendered by <b>AVAN</b> &middot; on az1's Earth station</div>
 <header class="cover">
 <div class="eyebrow">How AI Flattens Everything You Say</div>
+<div class="bear-medallion" role="img" aria-label="The Cinnamon Enforcer — a red gummy bear with glowing eyes brandishing cinnamon sticks">
+<svg viewBox="0 0 300 350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bearBody" cx="40%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#ff7350"/><stop offset="42%" stop-color="#e63a22"/>
+      <stop offset="100%" stop-color="#9d1204"/>
+    </radialGradient>
+    <radialGradient id="bearBelly" cx="50%" cy="42%" r="60%">
+      <stop offset="0%" stop-color="#ff8a68" stop-opacity=".55"/><stop offset="100%" stop-color="#ff8a68" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="eyeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff6cf"/><stop offset="28%" stop-color="#ffbf2e"/>
+      <stop offset="68%" stop-color="#ff5e12"/><stop offset="100%" stop-color="#ff5e12" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ember" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff0b0"/><stop offset="45%" stop-color="#ffab30"/>
+      <stop offset="100%" stop-color="#ff6a1a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <style>
+    @keyframes cbBreathe{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-3px) scale(1.014)}}
+    @keyframes cbEye{0%,100%{opacity:.78;transform:scale(.9)}50%{opacity:1;transform:scale(1.16)}}
+    @keyframes cbFlick{0%,100%{opacity:.55;transform:scale(.85)}50%{opacity:1;transform:scale(1.1)}}
+    .cb-all{animation:cbBreathe 4.6s ease-in-out infinite;transform-origin:150px 320px}
+    .cb-eye{animation:cbEye 2.1s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+    .cb-emb{animation:cbFlick 1.5s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+    .cb-emb.b{animation-delay:.5s}.cb-eye.r{animation-delay:.25s}
+    @media(prefers-reduced-motion:reduce){.cb-all,.cb-eye,.cb-emb{animation:none}}
+  </style>
+  <g class="cb-all">
+    <!-- cinnamon sticks + ember glows (behind hands) -->
+    <ellipse class="cb-emb" cx="20" cy="58" rx="16" ry="16" fill="url(#ember)"/>
+    <ellipse class="cb-emb b" cx="280" cy="58" rx="16" ry="16" fill="url(#ember)"/>
+    <line x1="52" y1="120" x2="22" y2="62" stroke="#8a4a24" stroke-width="9" stroke-linecap="round"/>
+    <line x1="52" y1="120" x2="22" y2="62" stroke="#b06a34" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="21" cy="60" r="5.5" fill="#ffcaa0"/>
+    <line x1="248" y1="120" x2="278" y2="62" stroke="#8a4a24" stroke-width="9" stroke-linecap="round"/>
+    <line x1="248" y1="120" x2="278" y2="62" stroke="#b06a34" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="279" cy="60" r="5.5" fill="#ffcaa0"/>
+    <!-- feet -->
+    <ellipse cx="112" cy="324" rx="36" ry="18" fill="#9d1204"/>
+    <ellipse cx="188" cy="324" rx="36" ry="18" fill="#9d1204"/>
+    <ellipse cx="112" cy="320" rx="30" ry="13" fill="url(#bearBody)"/>
+    <ellipse cx="188" cy="320" rx="30" ry="13" fill="url(#bearBody)"/>
+    <!-- raised arms -->
+    <path d="M98,180 C74,150 58,132 50,120" fill="none" stroke="url(#bearBody)" stroke-width="34" stroke-linecap="round"/>
+    <path d="M202,180 C226,150 242,132 250,120" fill="none" stroke="url(#bearBody)" stroke-width="34" stroke-linecap="round"/>
+    <!-- body -->
+    <ellipse cx="150" cy="226" rx="93" ry="99" fill="url(#bearBody)"/>
+    <ellipse cx="150" cy="250" rx="54" ry="60" fill="url(#bearBelly)"/>
+    <!-- head + ears -->
+    <circle cx="98" cy="54" r="25" fill="url(#bearBody)"/><circle cx="98" cy="54" r="11" fill="#c22712"/>
+    <circle cx="202" cy="54" r="25" fill="url(#bearBody)"/><circle cx="202" cy="54" r="11" fill="#c22712"/>
+    <ellipse cx="150" cy="102" rx="76" ry="68" fill="url(#bearBody)"/>
+    <!-- brows (menace) -->
+    <path d="M104,74 L138,90" stroke="#8f1608" stroke-width="7" stroke-linecap="round"/>
+    <path d="M196,74 L162,90" stroke="#8f1608" stroke-width="7" stroke-linecap="round"/>
+    <!-- eyes: glow + bright core -->
+    <ellipse class="cb-eye" cx="123" cy="100" rx="24" ry="21" fill="url(#eyeGlow)"/>
+    <ellipse class="cb-eye r" cx="177" cy="100" rx="24" ry="21" fill="url(#eyeGlow)"/>
+    <ellipse cx="123" cy="100" rx="11" ry="13" fill="#ffe38a"/>
+    <ellipse cx="177" cy="100" rx="11" ry="13" fill="#ffe38a"/>
+    <ellipse cx="123" cy="98" rx="5" ry="6" fill="#fff7de"/>
+    <ellipse cx="177" cy="98" rx="5" ry="6" fill="#fff7de"/>
+    <!-- snout -->
+    <ellipse cx="150" cy="130" rx="8.5" ry="6.5" fill="#5c0f06"/>
+    <path d="M119,146 Q150,172 181,146" fill="none" stroke="#7a1207" stroke-width="5" stroke-linecap="round"/>
+    <!-- gloss highlights -->
+    <ellipse cx="120" cy="72" rx="16" ry="11" fill="#ffa684" opacity=".5" transform="rotate(-28 120 72)"/>
+    <ellipse cx="120" cy="196" rx="17" ry="26" fill="#ff9c78" opacity=".4" transform="rotate(-16 120 196)"/>
+  </g>
+</svg>
+</div>
 <h1 class="title">THE <span class="c">CINNAMON</span> ENFORCER</h1>
 <div class="sub">And Why the Sharp Edges Matter</div>
 <div class="meta"><b>David Lee Wise</b> &middot; ROOT0 &middot; TriPod LLC<br><span class="lic">CC-BY-ND-4.0 &middot; TRIPOD-IP-v1.1</span><br><a class="dl" href="Cinnamon_Enforcer.epub" download>&#8675; download the .epub</a></div>
